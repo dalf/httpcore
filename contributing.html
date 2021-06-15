@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Developer Interface" href="api.html" />
+
+    <meta name="generator" content="sphinx-3.5.3, furo 2021.04.11.beta34"/>
+        <title>Contributing - HTTPCore documentation</title>
+      <link rel="stylesheet" href="_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">HTTPCore  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">HTTPCore  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Developer Interface</a></li>
+</ul>
+<p><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/encode/httpcore/blob/master/CHANGELOG.md">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/encode/httpcore/blob/master/LICENSE.md">License</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/encode/httpcore">Source Code</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>Thanks for considering contributing to HTTP Core!</p>
+<p>We welcome contributors to:</p>
+<ul class="simple">
+<li><p>Try <a class="reference external" href="https://www.python-httpx.org">HTTPX</a>, as it is HTTP Core’s main entry point,
+and <a class="reference external" href="https://github.com/encode/httpx/issues/new">report bugs/issues you find</a></p></li>
+<li><p>Help triage <a class="reference external" href="https://github.com/encode/httpcore/issues">issues</a> and investigate
+root causes of bugs</p></li>
+<li><p><a class="reference external" href="https://github.com/encode/httpcore/pulls">Review Pull Requests of others</a></p></li>
+<li><p>Review, clarify and write documentation</p></li>
+<li><p>Participate in discussions</p></li>
+</ul>
+<section id="reporting-bugs-or-other-issues">
+<h2>Reporting Bugs or Other Issues<a class="headerlink" href="#reporting-bugs-or-other-issues" title="Permalink to this headline">¶</a></h2>
+<p>HTTP Core is a fairly specialized library and its main purpose is to provide a
+solid base for <a class="reference external" href="https://www.python-httpx.org">HTTPX</a>. HTTPX should be considered
+the main entry point to HTTP Core and as such we encourage users to test and raise
+issues in <a class="reference external" href="https://github.com/encode/httpx/issues/new">HTTPX’s issue tracker</a>
+where maintainers and contributors can triage and move to HTTP Core if appropriate.</p>
+<p>If you are convinced that the cause of the issue is on HTTP Core you’re more than
+welcome to <a class="reference external" href="https://github.com/encode/httpcore/issues/new">open an issue</a>.</p>
+<p>Please attach as much detail as possible and, in case of a
+bug report, provide information like:</p>
+<ul class="simple">
+<li><p>OS platform or Docker image</p></li>
+<li><p>Python version</p></li>
+<li><p>Installed dependencies and versions (<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">freeze</span></code>)</p></li>
+<li><p>Code snippet to reproduce the issue</p></li>
+<li><p>Error traceback and output</p></li>
+</ul>
+<p>It is quite helpful to increase the logging level of HTTP Core and include the
+output of your program. To do so set the <code class="docutils literal notranslate"><span class="pre">HTTPCORE_LOG_LEVEL</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPX_LOG_LEVEL</span></code>
+environment variables to <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, for example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nv">HTTPCORE_LOG_LEVEL</span><span class="o">=</span>TRACE python test_script.py
+<span class="go">TRACE [2020-06-06 09:55:10] httpcore._async.connection_pool - get_connection_from_pool=(b'https', b'localhost', 5000)</span>
+<span class="go">TRACE [2020-06-06 09:55:10] httpcore._async.connection_pool - created connection=&lt;httpcore._async.connection.AsyncHTTPConnection object at 0x1110fe9d0&gt;</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>The output will be quite long but it will help dramatically in diagnosing the problem.</p>
+<p>For more examples please refer to the
+<a class="reference external" href="https://www.python-httpx.org/environment_variables/#httpx_log_level">environment variables documentation in HTTPX</a>.</p>
+</section>
+<section id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>To start developing HTTP Core create a <strong>fork</strong> of the
+<a class="reference external" href="https://github.com/encode/httpcore">repository</a> on GitHub.</p>
+<p>Then clone your fork with the following command replacing <code class="docutils literal notranslate"><span class="pre">YOUR-USERNAME</span></code> with
+your GitHub username:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/YOUR-USERNAME/httpcore
+</pre></div>
+</div>
+<p>You can now install the project and its dependencies using:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> httpcore
+$ scripts/install
+</pre></div>
+</div>
+</section>
+<section id="unasync">
+<h2>Unasync<a class="headerlink" href="#unasync" title="Permalink to this headline">¶</a></h2>
+<p>HTTP Core provides synchronous and asynchronous interfaces. As you can imagine,
+keeping two almost identical versions of code in sync can be quite time consuming.
+To work around this problem HTTP Core uses a technique called <em>unasync</em>, where
+the development is focused on the asynchronous version of the code and a script
+generates the synchronous version from it.</p>
+<p>As such developers should:</p>
+<ul class="simple">
+<li><p>Only make modifications in the asynchronous and shared portions of the code.
+In practice this roughly means avoiding the <code class="docutils literal notranslate"><span class="pre">httpcore/_sync</span></code> directory.</p></li>
+<li><p>Write tests <em>only under <code class="docutils literal notranslate"><span class="pre">async_tests</span></code></em>, synchronous tests are also generated
+as part of the unasync process.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">scripts/unasync</span></code> to generate the synchronous versions. Note the script
+is ran as part of other scripts as well, so you don’t usually need to run this
+yourself.</p></li>
+<li><p>Run the entire test suite as decribed below.</p></li>
+</ul>
+</section>
+<section id="testing-and-linting">
+<h2>Testing and Linting<a class="headerlink" href="#testing-and-linting" title="Permalink to this headline">¶</a></h2>
+<p>We use custom shell scripts to automate testing, linting,
+and documentation building workflow.</p>
+<p>To run the tests, use:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/test
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The test suite spawns testing servers on ports <strong>8000</strong> and <strong>8001</strong>.
+Make sure these are not in use, so the tests can run properly.</p>
+</div>
+<p>You can run a single test script like this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/test -- tests/async_tests/test_interfaces.py
+</pre></div>
+</div>
+<p>To run the code auto-formatting:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/lint
+</pre></div>
+</div>
+<p>Lastly, to run code checks separately (they are also run as part of <code class="docutils literal notranslate"><span class="pre">scripts/test</span></code>), run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/check
+</pre></div>
+</div>
+</section>
+<section id="documenting">
+<h2>Documenting<a class="headerlink" href="#documenting" title="Permalink to this headline">¶</a></h2>
+<p>Documentation pages are located under the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder.</p>
+<p>To run the documentation site locally (useful for previewing changes), use:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/docs
+</pre></div>
+</div>
+</section>
+<section id="resolving-build-ci-failures">
+<h2>Resolving Build / CI Failures<a class="headerlink" href="#resolving-build-ci-failures" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve submitted your pull request, the test suite will automatically run, and the results will show up in GitHub.
+If the test suite fails, you’ll want to click through to the “Details” link, and try to identify why the test suite failed.</p>
+<p align="center" style="margin: 0 0 10px">
+<img alt="Failing PR commit status" src="https://raw.githubusercontent.com/encode/httpx/master/docs/img/gh-actions-fail.png"/>
+</p>
+<p>Here are some common ways the test suite can fail:</p>
+<section id="check-job-failed">
+<h3>Check Job Failed<a class="headerlink" href="#check-job-failed" title="Permalink to this headline">¶</a></h3>
+<p align="center" style="margin: 0 0 10px">
+<img alt="Failing GitHub action lint job" src="https://raw.githubusercontent.com/encode/httpx/master/docs/img/gh-actions-fail-check.png"/>
+</p>
+<p>This job failing means there is either a code formatting issue or type-annotation issue.
+You can look at the job output to figure out why it’s failed or within a shell run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ scripts/check
+</pre></div>
+</div>
+<p>It may be worth it to run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">scripts/lint</span></code> to attempt auto-formatting the code
+and if that job succeeds commit the changes.</p>
+</section>
+<section id="docs-job-failed">
+<h3>Docs Job Failed<a class="headerlink" href="#docs-job-failed" title="Permalink to this headline">¶</a></h3>
+<p>This job failing means the documentation failed to build. This can happen for
+a variety of reasons like invalid markdown or missing configuration within <code class="docutils literal notranslate"><span class="pre">mkdocs.yml</span></code>.</p>
+</section>
+<section id="python-3-x-job-failed">
+<h3>Python 3.X Job Failed<a class="headerlink" href="#python-3-x-job-failed" title="Permalink to this headline">¶</a></h3>
+<p align="center" style="margin: 0 0 10px">
+<img alt="Failing GitHub action test job" src="https://raw.githubusercontent.com/encode/httpx/master/docs/img/gh-actions-fail-test.png"/>
+</p>
+<p>This job failing means the unit tests failed or not all code paths are covered by unit tests.</p>
+<p>If tests are failing you will see this message under the coverage report:</p>
+<p><code class="docutils literal notranslate"><span class="pre">===</span> <span class="pre">1</span> <span class="pre">failed,</span> <span class="pre">435</span> <span class="pre">passed,</span> <span class="pre">1</span> <span class="pre">skipped,</span> <span class="pre">1</span> <span class="pre">xfailed</span> <span class="pre">in</span> <span class="pre">11.09s</span> <span class="pre">===</span></code></p>
+<p>If tests succeed but coverage is lower than our current threshold, you will see this message under the coverage report:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FAIL</span> <span class="pre">Required</span> <span class="pre">test</span> <span class="pre">coverage</span> <span class="pre">of</span> <span class="pre">100%</span> <span class="pre">not</span> <span class="pre">reached.</span> <span class="pre">Total</span> <span class="pre">coverage:</span> <span class="pre">99.00%</span></code></p>
+</section>
+</section>
+<section id="releasing">
+<h2>Releasing<a class="headerlink" href="#releasing" title="Permalink to this headline">¶</a></h2>
+<p><em>This section is targeted at HTTPX maintainers.</em></p>
+<p>Before releasing a new version, create a pull request that includes:</p>
+<ul class="simple">
+<li><p><strong>An update to the changelog</strong>:</p>
+<ul>
+<li><p>We follow the format from <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">keepachangelog</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/encode/httpcore/compare/">Compare</a> <code class="docutils literal notranslate"><span class="pre">master</span></code> with the tag of the latest release, and list all entries that are of interest to our users:</p>
+<ul>
+<li><p>Things that <strong>must</strong> go in the changelog: added, changed, deprecated or removed features, and bug fixes.</p></li>
+<li><p>Things that <strong>should not</strong> go in the changelog: changes to documentation, tests or tooling.</p></li>
+<li><p>Try sorting entries in descending order of impact / importance.</p></li>
+<li><p>Keep it concise and to-the-point. 🎯</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>A version bump</strong>: see <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code>.</p></li>
+</ul>
+<p>For an example, see <a class="reference external" href="https://github.com/encode/httpcore/pull/99">#99</a>.</p>
+<p>Once the release PR is merged, create a
+<a class="reference external" href="https://github.com/encode/httpcore/releases/new">new release</a> including:</p>
+<ul class="simple">
+<li><p>Tag version like <code class="docutils literal notranslate"><span class="pre">0.9.3</span></code>.</p></li>
+<li><p>Release title <code class="docutils literal notranslate"><span class="pre">Version</span> <span class="pre">0.9.3</span></code></p></li>
+<li><p>Description copied from the changelog.</p></li>
+</ul>
+<p>Once created this release will be automatically uploaded to PyPI.</p>
+<p>If something goes wrong with the PyPI job the release can be published using the
+<code class="docutils literal notranslate"><span class="pre">scripts/publish</span></code> script.</p>
+</section>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="api.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Developer Interface</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Encode
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="_sources/contributing.md.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Contributing</a><ul>
+<li><a class="reference internal" href="#reporting-bugs-or-other-issues">Reporting Bugs or Other Issues</a></li>
+<li><a class="reference internal" href="#development">Development</a></li>
+<li><a class="reference internal" href="#unasync">Unasync</a></li>
+<li><a class="reference internal" href="#testing-and-linting">Testing and Linting</a></li>
+<li><a class="reference internal" href="#documenting">Documenting</a></li>
+<li><a class="reference internal" href="#resolving-build-ci-failures">Resolving Build / CI Failures</a><ul>
+<li><a class="reference internal" href="#check-job-failed">Check Job Failed</a></li>
+<li><a class="reference internal" href="#docs-job-failed">Docs Job Failed</a></li>
+<li><a class="reference internal" href="#python-3-x-job-failed">Python 3.X Job Failed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#releasing">Releasing</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>
