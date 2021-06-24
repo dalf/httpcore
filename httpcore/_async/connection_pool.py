@@ -23,7 +23,6 @@ from .connection import AsyncHTTPConnection
 
 logger = get_logger(__name__)
 
-
 class NullSemaphore(AsyncSemaphore):
     def __init__(self) -> None:
         pass
@@ -141,15 +140,6 @@ class AsyncConnectionPool(AsyncHTTPTransport):
 
         if not (http1 or http2):
             raise ValueError("Either http1 or http2 must be True.")
-
-        if http2:
-            try:
-                import h2  # noqa: F401
-            except ImportError:
-                raise ImportError(
-                    "Attempted to use http2=True, but the 'h2' "
-                    "package is not installed. Use 'pip install httpcore[http2]'."
-                )
 
     @property
     def _connection_semaphore(self) -> AsyncSemaphore:

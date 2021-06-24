@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 
 from setuptools import setup
+from Cython.Build import cythonize
 
 
 def get_version(package):
@@ -57,6 +58,7 @@ setup(
     extras_require={
         "http2": ["h2>=3,<5"],
     },
+    ext_modules=cythonize("httpcore/**/*.py", language_level = "3", compiler_directives=dict(always_allow_keywords=True)),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",

@@ -155,7 +155,7 @@ class AsyncHTTPConnection(AsyncHTTPTransport):
         ssl_context = self._ssl_context if scheme == b"https" else None
 
         retries_left = self._retries
-        delays = exponential_backoff(factor=RETRIES_BACKOFF_FACTOR)
+        delays = exponential_backoff(RETRIES_BACKOFF_FACTOR)
 
         while True:
             try:
