@@ -1,0 +1,10 @@
+[project]
+requires-python = ">=3.6"
+
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = [
+    "setuptools>=45",
+    "wheel",
+    "Cython>=0.*",
+]
